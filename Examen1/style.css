@@ -1,5 +1,11 @@
 *{
     scroll-behavior: smooth;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    border: 0;
+    font-family: Arial, Helvetica, sans-serif;
 }
 section{
     width: 100vw;
@@ -8,13 +14,15 @@ section{
 }
 .boton-whatsapp{
     position: fixed;
-    bottom: 10rem;
-    right: 10rem;
+    bottom: 1rem;
+    right: 1rem;
     border: 2px solid black;
-    width: 10rem;
-    height: 10rem;
+    width: 5rem;
+    height: 5rem;
+    border-radius: 50%;
 }
 .header {
+    border: 2px solid black;
     top: 0;
     display: flex;
     width: 100%;
@@ -24,6 +32,7 @@ section{
     padding: 0 0.5rem 0 2rem; /*TOP: 0px RIGHT: 8px BOTTOM: 0px LEFT: 32px*/
 }
 .header .navbar {
+    border: 2px solid black;
     display: flex;
     flex-direction: row;
     justify-content: space-around; /* Se le da un margen igual a cada elemento del contenedor */
@@ -41,13 +50,27 @@ section{
     height: 50%;
     border-radius: 50%;
 }
+.botones-header a{
+    border: 2px solid black;
+    width: 20%;
+    height: 100%;
+    padding: 0.4rem;
+    background-color: rgb(112, 56, 9);
+    color: white;
+    text-decoration: none;
+    border-radius: 0% 0% 50% 50% ;
+}
 .link img {
     width: 100%;
     height: 100%;
     border-radius: 50%;
-    border: 5px solid black;
+    
 }
-
+.botones-header link{
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+}
 .link:hover {
     box-shadow: 0 0 2rem black;
     cursor: pointer; /* el puntero se convierte en una manito */
