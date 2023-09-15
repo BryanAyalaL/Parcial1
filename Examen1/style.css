@@ -1,3 +1,4 @@
+/* configuracion basica de la ventana */
 *{
     scroll-behavior: smooth;
     margin: 0;
@@ -7,11 +8,19 @@
     border: 0;
     font-family: Arial, Helvetica, sans-serif;
 }
+
+/* configuracion de la secciones */
 section{
-    width: 100vw;
+    flex-wrap: nowrap;
+    display: flex;
+    justify-content: space-around; /* Se le da un margen igual a cada elemento del contenedor */
+    align-items: center;
+    width: 100%;
     height: 100vh;
-    border: 2px solid black;
+    background-color: var(--background-principal);
+    border: solid 2px black;
 }
+/* boton whatsapp */
 .boton-whatsapp{
     position: fixed;
     bottom: 1rem;
@@ -21,6 +30,11 @@ section{
     height: 5rem;
     border-radius: 50%;
 }
+.link:hover {
+    box-shadow: 0 0 2rem black;
+    cursor: pointer; /* el puntero se convierte en una manito */
+}
+/* configuracion basica de header */
 .header {
     border: 2px solid black;
     top: 0;
@@ -31,8 +45,9 @@ section{
     background-color: var(--background-principal);
     padding: 0 0.5rem 0 2rem; /*TOP: 0px RIGHT: 8px BOTTOM: 0px LEFT: 32px*/
 }
+/* nvbar (logo y nombre) */
 .header .navbar {
-    border: 2px solid black;
+    border: 2px solid red;
     display: flex;
     flex-direction: row;
     justify-content: space-around; /* Se le da un margen igual a cada elemento del contenedor */
@@ -42,14 +57,15 @@ section{
     padding: 1rem;
     background-color: var(--background-principal);
 }
+/* imagen y link de oreo en navbar */
 .navbar a {
+    border: solid 1px black;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    width: 20%;
-    height: 50%;
     border-radius: 50%;
 }
+/* botones de navegacion */
 .botones-header a{
     border: 2px solid black;
     width: 20%;
@@ -60,18 +76,125 @@ section{
     text-decoration: none;
     border-radius: 0% 0% 50% 50% ;
 }
+/* configuracion de links img */
 .link img {
-    width: 100%;
-    height: 100%;
+    width: 5vw;
+    height: 10vh;
     border-radius: 50%;
+}
+/* boton de footer */
+.botones-header img{
+    width: 1vw;
+    height: 1vh;
+}
+
+/* primer div1-secion1 */
+.div1-section1 {
+    border: solid 2px black;
+    width: 35%;
+    color: var(--color-letra);
+}
+/* configuracion del titulo de div1-secion1 */
+.div1-section1 h2 {
+    margin:10%;
+    border: solid 2px black;
+    font-size: 4rem;
+    font-weight: 600; /*Que tanta negrilla se quiere*/
+}
+/* parrafo */
+.div1-section1 p{
+    margin: 5%;
+    border: solid 2px black;
+}
+/* tamaño de la imagen */
+.div2-section1 img{
+    border: solid 2px black;
+    width: 30vw;
+    height: 50vh;
+}
+/* section2 
+creamos un padre que contenga todos los divs*/
+#div-padre{
+    height: 90vh;
+    width: 80vw;
+    justify-content:center;
+    border: solid 2px black;
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center;
+}
+#div-padre h2{
+    margin: 5%;
+}
+/* definimos los boxes */
+.hijos{
+    height: 200px;
+    width: 300px;
+    margin: 5%;
+    border: solid 2px black;
+    padding: 2px;
+    justify-content: center;
+    flex-wrap: wrap;
+    border: 1px dotted red;
+}
+.hijos h3{
+    margin:  20%;
+}
+.servicios{
+    width: 100%;
+    border: solid 2px black;
+    text-align:center;
+    margin: 20px;
     
 }
-.botones-header link{
+#footer{
+    height: 10vh;
+}
+
+/* section3 */
+.contenedor{  
+    width: 100%;
+    display: flex;
+    max-width: 1500px;
+
+}
+
+.card{
+    width: 110%;
+    margin: 20px;
+    border-radius: 6px;
+    overflow: hidden;
+    background: white;
+    box-shadow: 0px 1px rgba(0,0,0,0.2);
+    cursor: default;
+    transition:  all 600ms ease;
+}
+.card:hover{
+    box-shadow: 5px 5px 20px rgba(0,0,0,0.4);
+}
+.card img{
+    height: 40vw;
+    border-radius: 60%;
+}
+.card .contenido{
+    font-size: 15%;
+    padding: 10%;
+    text-align: center;
+}
+.titulo{
+    width:100%;
+    height: 20px;
+    text-align: center;
+    border: solid 2px gree;
+    font-weight: 350;
+    margin-bottom: 10px;
+ 
+}
+#footer img{
+    width: 2vw;
+    height: 3vh;
+}
+.boton-whatsapp img{
     width: 100%;
     height: 100%;
-    border-radius: 50%;
-}
-.link:hover {
-    box-shadow: 0 0 2rem black;
-    cursor: pointer; /* el puntero se convierte en una manito */
 }
