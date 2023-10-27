@@ -1,11 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
-    
+    <link rel="stylesheet" href="css/modal.css">
     <script src="js/seccion2.js" defer></script>
     <script src="js/seccion3.js" defer></script>
     <script src="js/mostrar.js" defer></script>
@@ -27,14 +28,30 @@
         <!-- botones de navegacion -->
         <div class="botones-header">
             <a href="#section1">Home</a>
-            <a href="#section2">Servicios</a>
-            <a href="#section3">Colaboradores</a>
+            
+        
+            <a href="#verMasPanel" id="verMas" class="vermas-link">Ver mas</a>
+            <a href="#seccion2" class="servicios-link">Servicios</a>
+            <a href="#section3" class="colaboradores-link">Colaboradores</a>
             <a href="#footer" >
                 <img src="img/flecha-hacia-abajo.png" alt="img-footer" class="img-footer">
             </a>
+            
         </div>
     </header>
-    <!-- secion1 -->
+    <button id="abrirModal">
+        Ver mas
+    </button>
+    <div class="modal">
+        <div class="backdrop"></div>
+        <div class="contenido">
+            <div class="cabecerra">
+                <h2>modal DPyT</h2>
+                <button id="cerrarModal">X</button>
+            </div>
+        </div>
+    </div>
+    <!-- seccion1 -->
     <section id="section1">
         <div class="div1-section1">
             <h2>Ejemplo</h2>
@@ -51,17 +68,14 @@
         </div>
 
     </section>
-    <div class="opciones">
-        <button id="btnShow" class="btn btn-primary" onclick="ShowHide()">
-            Ver mas
-        </button>
-    </div>
+    <!-- seccion2 -->
     <section class="seccion2-section" id="seccion2">
         <h2 >Servicios</h2>
         <div class="contenedor-servicios">
 
         </div>
     </section>
+    <!-- seccion3 -->
     <section  class="visible-section3" id="section3">
         <h2>Colaboradores</h2>
         <div Class="contenedor-Colaboradores">
@@ -77,5 +91,7 @@
     <a class="boton-whatsapp" href="https://wa.me/1234 ">
         <img src="img/2111774.png" alt="">
     </a>
+    
+    
 </body>
 </html>
